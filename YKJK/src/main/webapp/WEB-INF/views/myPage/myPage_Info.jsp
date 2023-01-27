@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>OOTD - 마이페이지(개인)</title>
+    <title>YKJK - 마이페이지(개인)</title>
     <script src="${pageContext.request.contextPath }/resources/asset/js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/myPage_Info.css">
     
@@ -93,7 +93,7 @@
                                     <div class='email-update-area'>
                                         <div class="input">
                                             <label for="email">변경 이메일 주소</label>
-                                            <input type="email" name="update_email" id="email" placeholder="변경 이메일 주소 입력(example@ootd.com)">
+                                            <input type="email" name="update_email" id="email" placeholder="변경 이메일 주소 입력(example@ykjk.com)">
                                         </div>
 
                                         <div class="btn-group">

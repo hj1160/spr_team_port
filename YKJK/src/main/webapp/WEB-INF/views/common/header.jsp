@@ -7,76 +7,121 @@
 <%@ include file="../member/loginModal.jsp"%>
 
 
-	<header class="header">
-		<div class="header_nav">
-			<!-- HEADER 로고 클릭 시 index화면으로 이동 -->
-			<div class="header_logo">
-				<img
-					src="${pageContext.request.contextPath }/resources/images/logo_header.png"
-					id="logo" />
+<header class="header">
+	<div class="header_nav">
+		<!-- HEADER 로고 클릭 시 index화면으로 이동 -->
+		<div class="header_logo">
+			<img
+				src="${pageContext.request.contextPath }/resources/images/logo_header.png"
+				id="logo" />
+		</div>
+
+		<!-- Header Brand, Second Hands (클릭 시 하단에 메뉴바) -->
+		<div class="header_menu">
+			<div>
+				<h3 id="brand">BRAND</h3>
 			</div>
-
-			<!-- Header Brand, Second Hands (클릭 시 하단에 메뉴바) -->
-			<div class="header_menu">
-				<div>
-					<h3 id="brand">BRAND</h3>
-				</div>
-				<div>
-					<h3 id="second_Hand">SECOND HAND</h3>
-				</div>
+			<div>
+				<h3 id="Choose">CHOOSE</h3>
 			</div>
-
-			<!-- 검색창, 장바구니, 마이페이지, 다크모드 -->
-			<div class="header_option">
-				<ul class="nav_menu">
-					<li class="search_li">
-						<div>
-
-							<form action="/header/totalSearch.do" method="POST" id="search_main">
-								<input type="text" class="search_input" name="totalSearch"><i class="fas fa-search fa-lg"></i>
-							</form>
-						</div>
-
-					</li>
-
-					<li><i class="fas fa-shopping-cart fa-lg" id="cartIcon"></i></li>
-
-					<li><i class="fas fa-user fa-lg" id="loginBtn"
-						data-target="#loginModal" data-toggle="modal" href="${contextContext.request.contextPage }/views/myPage/myPage_Info.jsp"></i></li>
-					<li>
-						<span class="fa-stack fa-lg"> 
-							<i class="far fa-sun fa-stack-1x fa-lg"></i> 
-							<i class ="far fa-moon fa-stack-1xfa-lg"></i>
-						</span>
-					</li>
-
+			<div>
+				<h3 id="used">USED</h3>
+			</div>
+			<div id="navi_menu">
+				<ul class="menu">
+					<li class="slide"><a href="/ykjkApp/product/productList.do?bName=YOU명&pType=1&categoryNo=0&sortVal=">YOU명</a></li>
+					<li class="slide"><a href="/ykjkApp/product/productList.do?bName=에이치준&pType=1&categoryNo=0&sortVal=">에이치준</a></li>
+					<li class="slide"><a href="/ykjkApp/product/productList.do?bName=JI&pType=1&categoryNo=0&sortVal=">JI</a></li>
+					<li class="slide"><a href="/ykjkApp/product/productList.do?bName=제이현&pType=1&categoryNo=0&sortVal=">제이현</a></li>
+					<li class="slide"><a href="/ykjkApp/product/productList.do?bName=YK&pType=1&categoryNo=0&sortVal=">YK</a></li>
+					<li class="slide"><a href="/ykjkApp/product/productList.do?bName=JK&pType=1&categoryNo=0&sortVal=">JK</a></li>
+					<li class="slide"><a href="/ykjkApp/product/productList.do?bName=YKJK&pType=1&categoryNo=0&sortVal=">YKJK</a></li>
 				</ul>
-
-
+				<ul class="menu">
+					<li class="slide"><a href="/ykjkApp/product/productList.do?categoryNo=1&pType=1&bName=All&sortVal=">TOP</a></li>
+					<li class="slide"><a href="/ykjkApp/product/productList.do?categoryNo=2&pType=1&bName=All&sortVal=">BOTTOM</a></li>
+					<li class="slide"><a href="/ykjkApp/product/productList.do?categoryNo=3&pType=1&bName=All&sortVal=">SHOES</a></li>
+					<li class="slide"><a href="/ykjkApp/product/productList.do?categoryNo=4&pType=1&bName=All&sortVal=">HAT</a></li>
+					<li class="slide"><a href="/ykjkApp/product/productList.do?categoryNo=5&pType=1&bName=All&sortVal=">BAG</a></li>
+				</ul>
+				<ul class="menu">
+					<li class="slide"><a href="/ykjkApp/product/productList.do?categoryNo=1&pType=2&sortVal=">TOP</a></li>
+					<li class="slide"><a href="/ykjkApp/product/productList.do?categoryNo=2&pType=2&sortVal=">BOTTOM</a></li>
+					<li class="slide"><a href="/ykjkApp/product/productList.do?categoryNo=3&pType=2&sortVal=">SHOES</a></li>
+					<li class="slide"><a href="/ykjkApp/product/productList.do?categoryNo=4&pType=2&sortVal=">HAT</a></li>
+					<li class="slide"><a href="/ykjkApp/product/productList.do?categoryNo=5&pType=2&sortVal=">BAG</a></li>
+				</ul>
 			</div>
 		</div>
-	</header>
 
 
 
+		<!-- 검색창, 장바구니, 마이페이지, 다크모드 -->
+		<div class="header_option">
+			<ul class="nav_menu">
+				<li class="search_li">
+					<div>
 
-	<script>
+						<form action="/header/totalSearch.do" method="POST"
+							id="search_main">
+							<input type="text" class="search_input" name="totalSearch"><i
+								class="fas fa-search fa-lg"></i>
+						</form>
+					</div>
+				</li>
+
+				<li><i class="fas fa-shopping-cart fa-lg" id="cartIcon"></i></li>
+
+				<li><i class="fas fa-user fa-lg" id="loginBtn"
+					data-target="#loginModal" data-toggle="modal"
+					href="${contextContext.request.contextPage }/views/myPage/myPage_Info.jsp"></i></li>
+				<li><span class="fa-stack fa-lg"> <i
+						class="far fa-sun fa-stack-1x fa-lg"></i> <i
+						class="far fa-moon fa-stack-1xfa-lg"></i>
+				</span></li>
+			</ul>
+		</div>
+	</div>
+</header>
+
+
+<script>
 	
-	$(function() {		
-		$('#brand').on('click', function() {
-			
-			var pType = 1;
-			location.href="${pageContext.request.contextPath}/product/productList.do?pType="+pType;
+		$(function() {
+			 $("#navi_menu").slideUp(0);
+			  $(".header_menu")
+			    .mouseover(function() {
+			      $("#navi_menu").stop().slideDown("noraml");
+			    })
+			    .mouseout(function() {
+			      $("#navi_menu").stop().slideUp("noraml");
+			    });
+			}); 
+		
+		$(function() {		
+			$('#brand').on('click', function() {
+				
+				var pType = 1;
+				location.href="${pageContext.request.contextPath}/product/productList.do?pType="+pType;
+			});
 		});
-	});
-	
-	$(function() {		
-		$('#second_Hand').on('click', function() {
-			
-			var pType = 2;
-			location.href="${pageContext.request.contextPath}/product/productList.do?pType="+pType;
+		
+		$(function() {		
+			$('#used').on('click', function() {
+				
+				var pType = 2;
+				location.href="${pageContext.request.contextPath}/product/productList.do?pType="+pType;
+			});
 		});
-	});
+		
+		// Choose 추가 예정
+		/* (function() {		
+			$('#used').on('click', function() {
+				
+				var pType = 3;
+				location.href="${pageContext.request.contextPath}/product/productList.do?pType="+pType;
+			});
+		}); */
 	
 	
 	

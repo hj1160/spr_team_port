@@ -69,7 +69,7 @@
         </div>
         <div class="package">
             <div id="prTextInput" class="inputBox3">
-                <span id="brand_name"><b>OOTD</b></span>
+                <span id="brand_name"><b>YKJK</b></span>
                 <br>
                 
                 <h4 id="pName">Clothes for Tomorrow</h4>
@@ -90,9 +90,7 @@
                     <br /><br />
                         박건형 , 엄기원 <br /><br /> 
                         
-                        박다인 , 김현진 <br /><br />
-                        
-                        홍정완 , 김황석 <br />
+                        박다인 , 김현진
                     </span> <br></dd>
                     <hr>
                     <dt class="drop"><b>마지막 한마디</b> 
@@ -348,14 +346,6 @@
 	        	$('html, body').animate({scrollTop : offset.top}, 50);
 			}
 		});
-			
-	
-			
-		
-		
-		
-	
-		
 		 
     </script>
 </body>
